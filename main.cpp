@@ -1,4 +1,29 @@
-#include <iostream>
+#include "parking.h"
+
+int main() {
+    int choice;
+    while (true) {
+        std::cout << "\nPARKING MANAGEMENT SYSTEM";
+        std::cout << "\n1. Add Vehicle";
+        std::cout << "\n2. Show Records";
+        std::cout << "\n3. Exit Vehicle";
+        std::cout << "\n4. Exit Program";
+        std::cout << "\nEnter Choice: ";
+        std::cin >> choice;
+        
+        switch (choice) {
+            case 1: addVehicle(); break;
+            case 2: showRecords(); break;
+            case 3: exitVehicle(); break;
+            case 4: std::cout << "\nExiting Program...\n"; return 0;
+            default: std::cout << "\nInvalid Choice!\n";
+        }
+    }
+    return 0;
+}
+
+
+/*#include <iostream>
 #include "parking.h"
 
 using namespace std;
@@ -49,4 +74,4 @@ int main() {
         }
     }
     return 0;
-}
+} */
